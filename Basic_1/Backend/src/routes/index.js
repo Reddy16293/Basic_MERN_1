@@ -1,6 +1,7 @@
 const express = require('express');
 
 const Register=require('../controllers/register-controller.js');
+const Login=require('../controllers/login-controller.js');
 const router=express.Router();
 const exampleMiddleware = (req, res, next) => {
     // Middleware logic here
@@ -8,5 +9,5 @@ const exampleMiddleware = (req, res, next) => {
 };
 
 router.post('/register',Register);
-
+router.post('/login',Login);
 module.exports=router;
